@@ -39,7 +39,26 @@ namespace kusanovicLenardSpremanjePrikazFiltriranjeXML
 
         private void btnZavrsi_Click(object sender, EventArgs e)
         {
-            if (!Dictionary.Exists())
+            if (!Directory.Exists(@"D:\Documents\xmlDokument"))
+            {
+                Directory.CreateDirectory(@"D:\Documents\xmlDokument");
+            }
+
+            var dokumentXmlUcenici = new XDocument(new XElement("listaUcenika",
+                    from Ucenik in listaUcenika
+                    select new XElement("Ucenik",
+                        new XAttribute("Ime", Ucenik.Ime),
+                        new XAttribute("Prezime", Ucenik.Prezime),
+                        new XAttribute("EmailAdresa", Ucenik.Email),
+                        new XAttribute("Razred", Ucenik.Razred)
+                        )));
+
+            dokumentXmlUcenici.Save("D:/Documents/xmlDokument/Ucenici.xml");
+
+            Form1 frm = new Form1();
+            this.Hide();
+            DialogResult rez = frm.ShowDialog();
+            this.Close();
         }
     }
 }

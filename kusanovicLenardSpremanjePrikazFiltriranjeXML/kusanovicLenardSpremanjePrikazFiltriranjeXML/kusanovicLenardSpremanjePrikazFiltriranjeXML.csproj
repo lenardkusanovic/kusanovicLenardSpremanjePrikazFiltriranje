@@ -73,6 +73,9 @@
     <Compile Include="Unos podataka.Designer.cs">
       <DependentUpon>Unos podataka.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Filtriranje podataka.resx">
+      <DependentUpon>Filtriranje podataka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

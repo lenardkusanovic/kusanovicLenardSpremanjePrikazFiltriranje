@@ -16,5 +16,21 @@ namespace kusanovicLenardSpremanjePrikazFiltriranjeXML
         {
             InitializeComponent();
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Pregled_podataka pregled_Podataka = new Pregled_podataka();
+            this.Hide();
+            pregled_Podataka.ShowDialog();
+            this.Close();
+        }
+
+        private void btnFiltriraj_Click(object sender, EventArgs e)
+        {
+            Pregled_podataka pregled_Podataka = new Pregled_podataka();
+            this.Hide();
+            pregled_Podataka.ShowDialog();
+            this.Close();
+        }
     }
 }

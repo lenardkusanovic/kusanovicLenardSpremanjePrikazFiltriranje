@@ -52,6 +52,7 @@ namespace kusanovicLenardSpremanjePrikazFiltriranjeXML
             this.btnFiltriraj.TabIndex = 1;
             this.btnFiltriraj.Text = "Filtriraj";
             this.btnFiltriraj.UseVisualStyleBackColor = true;
+            this.btnFiltriraj.Click += new System.EventHandler(this.btnFiltriraj_Click);
             // 
             // btnOdustani
             // 
@@ -61,6 +62,7 @@ namespace kusanovicLenardSpremanjePrikazFiltriranjeXML
             this.btnOdustani.TabIndex = 2;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // richTextBox1
             // 
